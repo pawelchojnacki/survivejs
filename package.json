@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/pawelchojnacki/survivejs/issues"
   },
-  "homepage": "https://github.com/pawelchojnacki/survivejs#readme"
+  "homepage": "https://github.com/pawelchojnacki/survivejs#readme",
+  "devDependencies": {
+    "webpack": "^1.12.11"
+  }
 }
