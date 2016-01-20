@@ -1,0 +1,23 @@
+{
+  "name": "kanban_app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawelchojnacki/survivejs.git"
+  },
+  "keywords": [
+    "kanban",
+    "survivejs"
+  ],
+  "author": "Pawel Chojnacki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pawelchojnacki/survivejs/issues"
+  },
+  "homepage": "https://github.com/pawelchojnacki/survivejs#readme"
+}
