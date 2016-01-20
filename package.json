@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,8 @@
   "homepage": "https://github.com/pawelchojnacki/survivejs#readme",
   "devDependencies": {
     "html-webpack-plugin": "^1.7.0",
-    "webpack": "^1.12.11"
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.7.3"
   }
 }
