@@ -19,7 +19,18 @@ const common = {
     new HtmlWebpackPlugin({
       title: 'Kanban app'
     })
-  ]
+  ],
+  module: {
+    loaders: [
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css'],
+        // Include accepts either a path or an array of paths
+        // It needs to be set for performance reasons
+        include: PATHS.app
+      }
+    ]
+  }
 };
 
 // Default configuration
