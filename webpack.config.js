@@ -12,7 +12,7 @@ const PATHS = {
 const common = {
   entry: PATHS.app,
   resolve: {
-    extensions: ['', '.js', 'jsx']
+    extensions: ['', '.js', '.jsx']
   },
   output: {
     path: PATHS.build,
@@ -20,7 +20,9 @@ const common = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Kanban app'
+      template: 'node_modules/html-webpack-template/index.html',
+      title: 'Kanban app',
+      appMountId: 'app'
     })
   ],
   module: {

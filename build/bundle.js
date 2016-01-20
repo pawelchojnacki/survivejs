@@ -44,23 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var component = __webpack_require__(1);
-	var app = document.createElement('div');
-
-	document.body.appendChild(app);
-
-	app.appendChild(component());
-
-
-/***/ },
-/* 1 */
-/***/ function(module, exports) {
-
-	module.exports = function () {
-	  var element = document.createElement('h1');
-	  element.innerHTML = 'Hello World!';
-	  return element;
-	}
+	(function webpackMissingModule() { throw new Error("Cannot find module \"/home/alxd/Sketchbook/survivejs/app\""); }());
+	(function webpackMissingModule() { throw new Error("Cannot find module \"/home/alxd/Sketchbook/survivejs/build\""); }());
 
 
 /***/ }
