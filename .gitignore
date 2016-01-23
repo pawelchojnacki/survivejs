@@ -36,3 +36,6 @@ node_modules
 # Sublime project
 *.sublime-project
 *.sublime-workspace
+
+# Let's keep the handbook in one place
+handbook
