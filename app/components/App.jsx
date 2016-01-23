@@ -28,7 +28,9 @@ export default class App extends React.Component {
       <div>
         <button onClick={this.addNote}>+</button>
         <ul>{notes.map((note) =>
-          <li key={note.id}>{note.task}</li>
+          <li key={note.id}>
+            <Note task={note.task} />
+          </li>
         )}</ul>
       </div>
     );
