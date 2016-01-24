@@ -1,2 +1,3 @@
 # survivejs
-survivejs react + webpack tutorial
+
+Tweaking around SurviveJS tutorial: http://survivejs.com/
