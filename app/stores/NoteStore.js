@@ -6,6 +6,9 @@ class NoteStore {
   constructor() {
     this.bindActions(NoteActions);
     this.notes = [];
+    this.exportPublicMethods({
+      getNotesByIds: this.getNotesByIds.bind(this)
+    });
   }
   create(note) {
     const notes = this.notes;
@@ -28,6 +31,13 @@ class NoteStore {
     this.setState({
       notes: this.notes.filter(note => note.id !== id)
     });
+  }
+  getNotesByIds(ids) {
+    // failsafe
+    return (ids || []).map(
+      id => this.notes.filter(note => note.id === id)
+    // filter out possible empty arrays
+    ).filter(a => a.length).map(a => a[0]);
   }
 }
 
