@@ -31,6 +31,10 @@ body {
   display: inline-block;
 }
 
+.note input {
+  max-width: 10em;
+}
+
 .note .delete-note {
   float: right;
   padding: 0;
