@@ -12,7 +12,7 @@ export default class Editable extends React.Component {
   renderEdit = () => {
     return <input type='text'
       ref={
-        (e) => e? e.selectionStart = this.props.task.length : null
+        (e) => e ? e.selectionStart = this.props.value.length : null
       }
       autofocus={true}
       defaultValue={this.props.value}
@@ -22,7 +22,7 @@ export default class Editable extends React.Component {
   renderValue = () => {
     const onDelete = this.props.onDelete;
     return (
-      <div onClick={this.onValueClick}>
+      <div onClick={this.props.onValueClick}>
         <span className='value'>{this.props.value}</span>
         {onDelete ? this.renderDelete() : null}
       </div>

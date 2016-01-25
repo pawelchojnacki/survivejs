@@ -56,22 +56,22 @@ export default class Lane extends React.Component {
     })
   }
   editNote(id, task) {
-    NoteActions.update({id, task});
+    NoteActions.update({id, task, editing: false});
   }
   deleteNote(laneId, noteId) {
     LaneActions.detachFromLane({laneId, noteId});
     NoteActions.delete(id);
   }
   editName(id, name) {
-    console.log(`edit lane ${id} name using ${name}`);
+    LaneActions.update({id, name, editing: false});
   }
   deleteLane(id) {
-    console.log(`delete lane ${id}`);
+    LaneActions.delete(id);
   }
   activateLaneEdit(id) {
-    console.log(`activate lane ${id} edit`);
+    LaneActions.update({id, editing: true});
   }
   activateNoteEdit(id) {
-    console.log(`activate note ${id} edit`);
+    NoteActions.update({id, editing: true});
   }
 }
