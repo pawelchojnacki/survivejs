@@ -6,9 +6,12 @@ const noteSource = {
   beginDrag(props) {
     return {
       id: props.id
-    }
+    };
+  },
+  isDragging(props, monitor) {
+    return props.id === monitor.getItem().id;
   }
-}
+};
 
 const noteTarget = {
   hover(targetProps, monitor) {
@@ -19,7 +22,7 @@ const noteTarget = {
       targetProps.onMove({sourceId, targetId})
     }
   }
-}
+};
 
 @DragSource(ItemTypes.NOTE, noteSource, (connect, monitor) => ({
   connectDragSource: connect.dragSource(),
