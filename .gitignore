@@ -39,3 +39,6 @@ node_modules
 
 # Let's keep the handbook in one place
 handbook
+
+# Stats file generated per-build
+stats.json
