@@ -6,9 +6,10 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "stats": "webpack --profile --json > stats.json",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "test": "karma start",
+    "tdd": "karma start --auto-watch --no-single-run"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,18 @@
     "gh-pages": "^0.8.0",
     "html-webpack-plugin": "^2.7.2",
     "html-webpack-template": "^3.0.2",
+    "isparta-instrumenter-loader": "^1.0.0",
+    "karma": "^0.13.19",
+    "karma-coverage": "^0.5.3",
+    "karma-mocha": "^0.2.1",
+    "karma-phantomjs-launcher": "^0.2.3",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.23",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.4.2",
+    "phantomjs": "^2.1.2",
+    "phantomjs-polyfill": "0.0.1",
+    "react-addons-test-utils": "^0.14.6",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.11",
     "webpack-dev-server": "^1.14.1",
