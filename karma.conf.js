@@ -13,7 +13,7 @@ module.exports = function karmaConfig (config) {
     ],
     preprocessors: {
       // convert files with webpack and load sourcemaps
-      'tests/**/*_test':['webpack', 'sourcemap']
+      'tests/**/*_test.*': ['webpack', 'sourcemap']
     },
     browsers: [
       'PhantomJS'
