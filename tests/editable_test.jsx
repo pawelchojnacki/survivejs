@@ -28,5 +28,21 @@ describe('Editable', () => {
     const valueComponent = findRenderedDOMComponentWithClass(component, 'value');
     Simulate.click(valueComponent);
     assert.equal(triggered, true);
+  });
+
+  it('triggers onEdit', () => {
+    let triggered = false;
+    const newValue = 'value';
+    const onEdit = (val) => {
+      triggered = true;
+      assert.equal(val, newValue);
+    };
+    const component = renderIntoDocument(
+      <Editable editing={true} value={'value'} onEdit={onEdit} />
+    );
+    const input = findRenderedDOMComponentWithTag(component, 'input');
+    input.value = newValue;
+    Simulate.blur(input);
+    assert.equal(triggered, true);
   })
 });
