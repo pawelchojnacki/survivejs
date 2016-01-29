@@ -1,7 +1,19 @@
 import React from 'react';
 
-class Editable extends React.Component {
-  render() {
+export default class Editable extends React.Component {
+  static props: {
+    value?: string,
+    editing?: boolean,
+    onEdit?: Function,
+    onDelete?: Function,
+    onValueClick?: Function
+  };
+  static defaultProps: {
+    value: '',
+    editing: false,
+    onEdit: () => {}
+  }
+  render(): Object {
     const {value, onEdit, onValueClick, editing, ...props} = this.props;
     return (
       <div {...props}>
@@ -9,7 +21,7 @@ class Editable extends React.Component {
       </div>
     );
   }
-  renderEdit = () => {
+  renderEdit: () => Object = () => {
     return <input type='text'
       ref={
         (e) => e ? e.selectionStart = this.props.value.length : null
@@ -19,7 +31,7 @@ class Editable extends React.Component {
       onBlur={this.finishEdit}
       onKeyPress={this.checkEnter} />;
   };
-  renderValue = () => {
+  renderValue: () => Object = () => {
     const onDelete = this.props.onDelete;
     return (
       <div onClick={this.props.onValueClick}>
@@ -28,33 +40,18 @@ class Editable extends React.Component {
       </div>
     );
   };
-  renderDelete = () => {
+  renderDelete: () => Object = () => {
     return <button className='delete' onClick={this.props.onDelete}>x</button>;
   };
-  checkEnter = (e) => {
+  checkEnter: (e: Object) => void (e) => {
     if (e.key === 'Enter') {
       this.finishEdit(e);
     }
   };
-  finishEdit = (e) => {
+  finishEdit: (e: Object) => void = (e) => {
     const value = e.target.value;
     if (value.trim()) {
       this.props.onEdit(value);
     }
   };
 }
-
-Editable.propTypes = {
-  value: React.PropTypes.string,
-  editing: React.PropTypes.bool,
-  onEdit: React.PropTypes.func.isRequired,
-  onDelete: React.PropTypes.func,
-  onValueClick: React.PropTypes.func
-};
-Editable.defaultProps = {
-  value: '',
-  editing: false,
-  onEdit: () => {}
-};
-
-export default Editable;

@@ -9,7 +9,8 @@
     "stats": "webpack --profile --json > stats.json",
     "deploy": "gh-pages -d build",
     "test": "karma start",
-    "tdd": "karma start --auto-watch --no-single-run"
+    "tdd": "karma start --auto-watch --no-single-run",
+    "flow": "flow check"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "clean-webpack-plugin": "^0.1.6",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "flow-bin": "^0.20.1",
     "gh-pages": "^0.8.0",
     "html-webpack-plugin": "^2.7.2",
     "html-webpack-template": "^3.0.2",
