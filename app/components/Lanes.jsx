@@ -1,6 +1,5 @@
 import React from 'react';
 import Lane from './Lane.jsx';
-import LaneActions from '../actions/LaneActions';
 
 const Lanes = ({lanes}) => {
   return (

@@ -1,6 +1,5 @@
 import AltContainer from 'alt-container';
 import React from 'react';
-import Note from './Note.jsx';
 import Lanes from './Lanes.jsx';
 import LaneActions from '../actions/LaneActions';
 import LaneStore from '../stores/LaneStore';
@@ -23,7 +22,7 @@ export default class App extends React.Component {
         </AltContainer>
       </div>
     );
-  };
+  }
   addLane() {
     LaneActions.create({name: 'New lane'});
   }
