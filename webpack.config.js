@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const pkg = require('./package.json');
 const Clean = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const stylelint = require('stylelint');
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
@@ -36,6 +37,11 @@ const common = {
         test: /\.jsx?$/,
         loaders: ['eslint'],
         include: PATHS.app
+      },
+      {
+        test: /\.css$/,
+        loaders: ['postcss'],
+        include: PATHS.app
       }
     ],
     loaders: [
@@ -45,6 +51,13 @@ const common = {
         include: PATHS.app
       }
     ]
+  },
+  postcss: () => {
+    return [stylelint({
+      rules: {
+        'color-hex-case': 'lower'
+      }
+    })]
   }
 };
 
