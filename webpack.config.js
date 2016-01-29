@@ -54,7 +54,7 @@ if (TARGET === 'start' || !TARGET) {
       stats: 'errors-only',
       // Parse host and port from env
       host: process.env.HOST,
-      port: process.env.PORT,
+      port: process.env.PORT
     },
     module: {
       loaders: [
