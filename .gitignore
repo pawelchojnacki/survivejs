@@ -42,3 +42,5 @@ handbook
 
 # Stats file generated per-build
 stats.json
+
+.editorconfig
