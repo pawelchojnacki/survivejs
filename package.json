@@ -43,6 +43,8 @@
     "html-webpack-plugin": "^2.7.2",
     "html-webpack-template": "^3.0.2",
     "isparta-instrumenter-loader": "^1.0.0",
+    "jscs": "^2.9.0",
+    "jscs-loader": "^0.2.0",
     "karma": "^0.13.19",
     "karma-coverage": "^0.5.3",
     "karma-mocha": "^0.2.1",
